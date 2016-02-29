@@ -1,0 +1,14 @@
+<h1>Please, confirm your account:</h1>
+<h3 style="text-align: center; font-family:Ubuntu ">Type numbers which were got on your mail or phone</h3>
+<div class="my-form">
+<strong><%= render partial: "shared/flash_message", flash: flash %></strong>
+
+
+<%= bootstrap_form_tag url: 'update' do |f| %>
+    <%= f.text_field :pin, hide_label: true, placeholder: "Type your code", icon: "lock" %>
+    <%= f.submit "Confirm", id:"ttt" %>
+
+<% end %>
+</div>
+
+

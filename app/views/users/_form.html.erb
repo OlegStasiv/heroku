@@ -1,0 +1,17 @@
+<div class="my-form">
+  <%= render partial: "shared/flash_message", flash: flash %>
+<%= bootstrap_form_for(@user, inline_errors: true) do |t| %>
+    <%= t.text_field :first_name, hide_label: true, placeholder: "First name ...", icon: "user" %>
+    <%= t.text_field :last_name, hide_label: true, placeholder: "Last name ...", icon: "user"%>
+    <%= t.email_field :email, hide_label: true, placeholder: "Email address ...", icon: "envelope"%>
+    <%= t.text_field :phone, hide_label: true, placeholder: "Phone number ...", icon: "phone-alt"%>
+    <%= t.date_field :birthday, hide_label: true, placeholder: "Phone number ...", icon: "calendar"%>
+    <%= t.password_field :password, hide_label: true, placeholder: "Password ...", icon: "lock"%>
+    <%= t.password_field :password_confirmation, hide_label: true, placeholder: "Password confirm ...", icon: "lock"%>
+
+
+
+    <%= t.primary "Sign Up", id:"ttt" %>
+<% end %>
+</div>
+

@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  resources :users
+
+  root 'users#new'
+
+  get 'confirm', to: 'users#confirm'
+  post 'update', to: 'users#update'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
